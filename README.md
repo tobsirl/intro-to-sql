@@ -1,2 +1,3 @@
-# intro-to-sql
+# Intro-to-sql
+
 FM course

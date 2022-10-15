@@ -44,3 +44,8 @@ CREATE TABLE ingredients (
 ```sql
 INSERT INTO ingredients (title) VALUES ('bell pepper');
 ```
+
+To view the record run:
+```sql
+SELECT * FROM ingredients;
+```

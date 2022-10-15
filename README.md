@@ -65,9 +65,14 @@ Add an column to our table
 
 ```sql
 ALTER TABLE ingredients ADD COLUMN image VARCHAR ( 255 );
+
+ALTER TABLE ingredients
+ADD COLUMN image VARCHAR ( 255 ),
+ADD COLUMN type VARCHAR ( 50 ) NOT NULL DEFAULT 'vegetable';
 ```
 
 Drop the column
+
 ```sql
 ALTER TABLE ingredients DROP COLUMN image;
 ```

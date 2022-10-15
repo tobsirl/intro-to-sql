@@ -66,3 +66,8 @@ Add an column to our table
 ```sql
 ALTER TABLE ingredients ADD COLUMN image VARCHAR ( 255 );
 ```
+
+Drop the column
+```sql
+ALTER TABLE ingredients DROP COLUMN image;
+```

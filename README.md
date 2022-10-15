@@ -38,3 +38,9 @@ CREATE TABLE ingredients (
   title VARCHAR ( 255 ) UNIQUE NOT NULL
 );
 ```
+
+## Adding a record
+
+```sql
+INSERT INTO ingredients (title) VALUES ('bell pepper');
+```

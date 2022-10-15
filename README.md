@@ -46,6 +46,15 @@ INSERT INTO ingredients (title) VALUES ('bell pepper');
 ```
 
 To view the record run:
+
 ```sql
 SELECT * FROM ingredients;
+```
+
+### Dropping a table
+
+To drop a table
+
+```sql
+DROP TABLE ingredients;
 ```

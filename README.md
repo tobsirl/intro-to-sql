@@ -21,3 +21,11 @@ psql has a bunch of build in commands to help you navigate around. `\?` to show 
 `template0` should never be modified. If your template1 gets out of whack, you can drop it and recreate from the fresh template0.
 
 `postgres` exists for the purpose of a default database to connect to. We're actually connected to it by default since we didn't specify a database to connect to. You can technically could delete it but there's no reason to and a lot of tools and extensions do rely on it being there.
+
+## Create you own
+
+```sql
+CREATE DATABASE recipeguru;
+```
+
+`\c recipeguru` to connect to the database.

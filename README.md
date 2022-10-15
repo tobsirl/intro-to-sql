@@ -58,3 +58,11 @@ To drop a table
 ```sql
 DROP TABLE ingredients;
 ```
+
+### Alter table
+
+Add an column to our table
+
+```sql
+ALTER TABLE ingredients ADD COLUMN image VARCHAR ( 255 );
+```

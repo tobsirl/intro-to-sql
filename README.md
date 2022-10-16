@@ -90,6 +90,48 @@ INSERT INTO "ingredients" (
   'broccoli', 'broccoli.jpg', 'vegetable' -- and the ' here
 );
 ```
+
 This is the standard way of doing an insert. In the first set of parens you list out the column names then in the values column you list the actual values you want to insert.
 
 Big key here which will throw JS developers for a loop: you must use single quotes. Single quotes in SQL means "this is a literal value". Double quotes in SQL mean "this is an identifier of some variety".
+
+`Use -- for comments`
+
+The above query works because the double quotes are around identifiers like the table name and the column names. The single quotes are around the literal values. The double quotes above are optional. The single quotes are not.
+
+```sql
+INSERT INTO ingredients (
+  title, image, type
+) VALUES
+  ( 'avocado', 'avocado.jpg', 'fruit' ),
+  ( 'banana', 'banana.jpg', 'fruit' ),
+  ( 'beef', 'beef.jpg', 'meat' ),
+  ( 'black_pepper', 'black_pepper.jpg', 'other' ),
+  ( 'blueberry', 'blueberry.jpg', 'fruit' ),
+  ( 'broccoli', 'broccoli.jpg', 'vegetable' ),
+  ( 'carrot', 'carrot.jpg', 'vegetable' ),
+  ( 'cauliflower', 'cauliflower.jpg', 'vegetable' ),
+  ( 'cherry', 'cherry.jpg', 'fruit' ),
+  ( 'chicken', 'chicken.jpg', 'meat' ),
+  ( 'corn', 'corn.jpg', 'vegetable' ),
+  ( 'cucumber', 'cucumber.jpg', 'vegetable' ),
+  ( 'eggplant', 'eggplant.jpg', 'vegetable' ),
+  ( 'fish', 'fish.jpg', 'meat' ),
+  ( 'flour', 'flour.jpg', 'other' ),
+  ( 'ginger', 'ginger.jpg', 'other' ),
+  ( 'green_bean', 'green_bean.jpg', 'vegetable' ),
+  ( 'onion', 'onion.jpg', 'vegetable' ),
+  ( 'orange', 'orange.jpg', 'fruit' ),
+  ( 'pineapple', 'pineapple.jpg', 'fruit' ),
+  ( 'potato', 'potato.jpg', 'vegetable' ),
+  ( 'pumpkin', 'pumpkin.jpg', 'vegetable' ),
+  ( 'raspberry', 'raspberry.jpg', 'fruit' ),
+  ( 'red_pepper', 'red_pepper.jpg', 'vegetable' ),
+  ( 'salt', 'salt.jpg', 'other' ),
+  ( 'spinach', 'spinach.jpg', 'vegetable' ),
+  ( 'strawberry', 'strawberry.jpg', 'fruit' ),
+  ( 'sugar', 'sugar.jpg', 'other' ),
+  ( 'tomato', 'tomato.jpg', 'vegetable' ),
+  ( 'watermelon', 'watermelon.jpg', 'fruit' )
+ON CONFLICT DO NOTHING;
+```

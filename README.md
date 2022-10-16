@@ -155,3 +155,18 @@ The RETURNING clause tells Postgres you want to return those columns of the thin
 ```sql
 UPDATE ingredients SET image = 'watermelon.jpg' WHERE title = 'watermelon' RETURNING *;
 ```
+
+```sql
+INSERT INTO ingredients
+  (title, image)
+VALUES
+  ('not real 1', 'delete.jpg'),
+  ('not real 2', 'delete.jpg');
+```
+
+```sql
+UPDATE ingredients
+SET image = 'different.jpg'
+WHERE image='delete.jpg'
+RETURNING id, title, image;
+```

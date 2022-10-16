@@ -135,3 +135,9 @@ INSERT INTO ingredients (
   ( 'watermelon', 'watermelon.jpg', 'fruit' )
 ON CONFLICT DO NOTHING;
 ```
+
+### Update a record
+
+```sql
+UPDATE ingredients SET image = 'watermelon.jpg' WHERE title = 'watermelon';
+```

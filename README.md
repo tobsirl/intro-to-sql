@@ -141,3 +141,17 @@ ON CONFLICT DO NOTHING;
 ```sql
 UPDATE ingredients SET image = 'watermelon.jpg' WHERE title = 'watermelon';
 ```
+
+The WHERE clause is where you filter down what you want to update. In this case there's only one watermelon so it'll just update one but if you had many watermelons it would match all of those and update all of them
+
+If you want to return what was updated try:
+
+```sql
+UPDATE ingredients SET image = 'watermelon.jpg' WHERE title = 'watermelon' RETURNING id, title, image;
+```
+
+The RETURNING clause tells Postgres you want to return those columns of the things you've updated. In our case I had it return literally everything we have in the table so you could write that as
+
+```sql
+UPDATE ingredients SET image = 'watermelon.jpg' WHERE title = 'watermelon' RETURNING *;
+```

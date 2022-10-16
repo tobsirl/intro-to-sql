@@ -76,3 +76,7 @@ Drop the column
 ```sql
 ALTER TABLE ingredients DROP COLUMN image;
 ```
+
+### Data types
+
+There are so many data types in PostgreSQL that we won't get close to covering them all. [Have a peek here from the PostgreSQL docs](https://www.postgresql.org/docs/14/datatype.html) to see the full list.

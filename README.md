@@ -80,3 +80,16 @@ ALTER TABLE ingredients DROP COLUMN image;
 ### Data types
 
 There are so many data types in PostgreSQL that we won't get close to covering them all. [Have a peek here from the PostgreSQL docs](https://www.postgresql.org/docs/14/datatype.html) to see the full list.
+
+### Inserting data
+
+```sql
+INSERT INTO "ingredients" (
+ "title", "image", "type" -- Notice the " here
+) VALUES (
+  'broccoli', 'broccoli.jpg', 'vegetable' -- and the ' here
+);
+```
+This is the standard way of doing an insert. In the first set of parens you list out the column names then in the values column you list the actual values you want to insert.
+
+Big key here which will throw JS developers for a loop: you must use single quotes. Single quotes in SQL means "this is a literal value". Double quotes in SQL mean "this is an identifier of some variety".

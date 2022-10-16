@@ -170,3 +170,14 @@ SET image = 'different.jpg'
 WHERE image='delete.jpg'
 RETURNING id, title, image;
 ```
+
+### Delete a record
+
+```sql
+DELETE FROM ingredients
+WHERE image='different.jpg'
+RETURNING *;
+```
+
+Here we just have no SET clause. Anything that matches that WHERE clause will be deleted. The RETURNING, like in updates, is optional if you want to see what was deleted.
+

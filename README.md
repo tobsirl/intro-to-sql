@@ -181,3 +181,14 @@ RETURNING *;
 
 Here we just have no SET clause. Anything that matches that WHERE clause will be deleted. The RETURNING, like in updates, is optional if you want to see what was deleted.
 
+### SELECT
+  
+  ```sql
+  SELECT * FROM ingredients;
+  ```
+  
+  ```sql
+  SELECT id, title, image FROM ingredients;
+  ```
+  
+ 

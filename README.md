@@ -191,7 +191,8 @@ Here we just have no SET clause. Anything that matches that WHERE clause will be
   SELECT id, title, image FROM ingredients;
   ```
   
- ### LIMIT and OFFSET
+### LIMIT and OFFSET
+
  ```sql
  SELECT id, title, image
 FROM ingredients
@@ -204,3 +205,11 @@ FROM ingredients
 LIMIT 5
 OFFSET 5;
  ```
+
+### WHERE
+
+```sql
+SELECT *
+FROM ingredients
+WHERE type = 'fruit';
+```

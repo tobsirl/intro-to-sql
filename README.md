@@ -213,3 +213,17 @@ SELECT *
 FROM ingredients
 WHERE type = 'fruit';
 ```
+
+```sql
+SELECT *
+FROM ingredients
+WHERE type = 'vegetable'
+  AND id < 20;
+```
+
+```sql
+SELECT *
+FROM ingredients
+WHERE id <= 10
+  OR id >= 20;
+```

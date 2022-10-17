@@ -227,3 +227,12 @@ FROM ingredients
 WHERE id <= 10
   OR id >= 20;
 ```
+
+### ORDER BY
+
+```sql
+SELECT * FROM ingredients ORDER BY title;
+
+SELECT * FROM ingredients ORDER BY title DESC;
+
+```

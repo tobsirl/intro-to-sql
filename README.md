@@ -242,3 +242,5 @@ SELECT * FROM ingredients ORDER BY title DESC;
 ```sql
 SELECT * FROM ingredients WHERE title LIKE 'pota%';
 ```
+
+## Relationships
